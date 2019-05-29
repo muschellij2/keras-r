@@ -7,7 +7,7 @@ FROM rocker/r-ver:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /opt/conda/bin:$PATH
 
-RUN apt-get -qq update && apt-get install libbz2-dev
+RUN apt-get -qq update && apt-get install -y libbz2-dev
 
 # Install Anaconda
 RUN apt-get -qq update && apt-get install -y wget
