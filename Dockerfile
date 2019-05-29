@@ -7,6 +7,8 @@ FROM rocker/r-ver:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV PATH /opt/conda/bin:$PATH
 
+RUN apt-get -qq update && apt-get install libbz2-dev
+
 # Install Anaconda
 RUN apt-get -qq update && apt-get install -y wget
 RUN wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh && \
